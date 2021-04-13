@@ -1,0 +1,10 @@
+image: maven:3.6.3-openjdk-8
+
+pipelines:
+  default:
+    - step:
+        name: build and test
+        caches:
+          - maven
+        script:
+          - mvn test
